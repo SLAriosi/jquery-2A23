@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução Jquery</title>
+    <!--Chamando biblioteca jQuery-->
+    <script type="text/javascript" src="jquery.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <!--Funcionalidades da página-->
+    <script type="text/javascript" >
+         /*function pegarvalor(){
+            var valorform = $('.nome').val();
+            alert(valorform);
+         }
+*/
+         function pegarvalor(){
+            //Valor que está dentro da classe
+            var valorform = document.querySelector('.nome').value;
+            var valorformMail = document.querySelector('.email').value;
+            var valorformMensagem = document.querySelector('.mensagem').value;
+
+            alert(
+                'Olá, ' + valorform + 
+                ' Seu e-mail ' + valorformMail + 
+                ' Mensagem Usuário '+ valorformMensagem
+            );
+
+            alert(
+                'insert into nometabela(nome, email, mensagem)value(' + valorform + ',' + valorformMail + ',' + valorformMensagem + ')'
+            );
+        } 
+
+         $(document).ready(function () {
+            $("a").click(function () {
+                alert('Você perdeu!');
+            })
+        })
+    </script>
+</head>
+<body>
+    <form action="">
+        <input type="text" name="nome" placeholder="Insira seu nome" required class="nome" >
+        <input type="email" name="email" placeholder="Insira seu E-mail" required class="email" >
+        <textarea name="mensagem" placeholder="Deixe sua mensagem" cols="30" rows="10" required class="mensagem" ></textarea>
+
+        <button onclick="pegarvalor()">Enviar</button>
+    </form>
+
+    <hr>
+    <a href="#">Não Clique Aqui!!</a>
+
+</body>
+</html>
+
+<link rel="stylesheet" href="code.jquery.com_jquery-3.7.1.min.js">

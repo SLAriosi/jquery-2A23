@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #add2b5 ;
+}
+
+form {
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 50px;
+
+}
+
+input, textarea, button{
+    width: 100%;
+    margin: 5px 0;
+    font-size: 22px;
+}
+
+input, button{
+    height: 40px;
+}
