@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução Jquery</title>
+    <!--Chamando biblioteca jQuery-->
+    <script type="text/javascript" src="jquery.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://rawgit.com/RobinHerbots/Inputmask/3.x/dist/jquery.inputmask.bundle.js"></script>
+    <!--Funcionalidades da página-->
+    <script type="text/javascript" >
+    
+        $(document).ready(function () {
+          $('#nascimento').inputmask("99/99/9999");
+          $('#RG').inputmask("99.999.999-9");
+          $('#CPF').inputmask("999.999.999-99");
+        });
+
+    </script>
+</head>
+
+<body>
+  <form action="post">
+    <table>
+      <tr>
+        <td>
+          Data de Nascimento
+        </td>
+        <td>
+          <input type="date" id="nascimento" name="nascimento">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Registro Geral
+        </td>
+        <td>
+          <input type="text" id="RG" name="rg">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          CPF
+        </td>
+        <td>
+          <input type="text" id="CPF" name="CPF">
+        </td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>
+
+<link rel="stylesheet" href="code.jquery.com_jquery-3.7.1.min.js">
